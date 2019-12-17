@@ -7,13 +7,11 @@
     
     <link rel="stylesheet" href="https://leonwnf.github.io/coral-spectrum/css/coral.min.css">
 
-    <script src="https://leonwnf.github.io/script.js"></script>
-
     <script src="https://leonwnf.github.io/coral-spectrum/js/coral.min.js" data-coral-icons="https://leonwnf.github.io/coral-spectrum/resources"></script>
 
   </head>
   
-  <body class="coral--dark">
+  <body class="coral--light">
     
     
     <div class="coral-FixedColumn">
@@ -96,10 +94,13 @@
 
                     <span class="helper-text" id="src_baseName"></span>
                 </div>
-
+                
+                <!--
                 <div class="input-field col s6">
                     <a class="waves-effect waves-light btn" id="btn_loadSrcBase"><i class="material-icons left">autorenew</i>Fetch Base</a>
                 </div>
+                -->
+                <button is="coral-button" id="btn_loadSrcBase">Fetch Base</button>
 
 
             </div>
@@ -211,6 +212,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/airtable@0.8.1/build/airtable.browser.min.js"></script>
+    <script src="https://leonwnf.github.io/script.js"></script>    
 
   </body>
 </html>
