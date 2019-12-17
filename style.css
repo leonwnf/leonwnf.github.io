@@ -1,0 +1,116 @@
+body, html {
+    font-family: 'Roboto', sans-serif;
+ }
+ 
+ h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+ }
+ 
+ h1#title {
+    margin-top: 0.1em;
+    font-size: 72pt;
+ }
+
+ a {
+    color: #E50914;
+ }
+ 
+
+ /* Input style template */
+
+/* label color */
+.input-field label {
+    color: #000;
+  }
+  .input-field input[type=text] {
+    font-size: 11pt;
+  }
+  
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: #000;
+   
+  }
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* valid color */
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid #1de9b6;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* invalid color */
+  .input-field input[type=text].invalid {
+    border-bottom: 1px solid #ff1744;
+    /*box-shadow: 0 1px 0 0 #000;*/
+  }
+
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: #000;
+  }
+
+  .input-field .helper-text .invalid {
+      color: #e53935;
+  }
+
+  i.left {
+      margin-right: 8px;
+  }
+       
+  .btn, .btn-large, .btn-small, .btn-flat {
+    height: 42px;
+    line-height: 42px;
+    padding-right: 24px;
+  }
+  
+  .input-field.col label {
+    margin-bottom: 1em;
+  }
+  
+ /*
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+   font-size: 10pt;
+   padding: 4pt 7pt;
+   margin-top: 8pt;
+ }
+ */
+ .dropdown-content li>a, .dropdown-content li>span {
+   color: #424242;
+ }
+ 
+
+ .input-field span.helper-text {
+     color: #90a4ae;
+     color: 10px;
+ }
+ 
+ .superscript {
+    font-size: 70%;
+    margin-top: 2em;
+    margin-bottom: 0.2em;
+ }
+ 
+
+ 
+ .page-header a {
+    color: #000;
+    text-decoration: underline;
+ }
+ 
+ .page-header {
+    width: 100%;
+    padding: 2em 0;
+ }
+
+ .toggleVisible{ 
+  visibility: hidden;
+ }
+
+.info-text strong {
+ font-weight: bold;
+}
+ 
