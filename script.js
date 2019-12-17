@@ -22,7 +22,7 @@
         elems.attr('disabled', 'disabled');
     
         let dropdownOptions = $('option');
-        let instances = M.FormSelect.init(elems, dropdownOptions);
+        //let instances = M.FormSelect.init(elems, dropdownOptions);
     
         // Setup listener for custom event to re-initialize on change
         $('.materialSelect').on('contentChanged', function(e) {
