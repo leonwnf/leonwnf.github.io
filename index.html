@@ -1,1 +1,178 @@
-Hello World
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+    
+    <link rel="stylesheet" href="coral-spectrum/css/coral.min.css">
+    <script src="coral-spectrum/js/coral.min.js" data-coral-icons="coral-spectrum/resources"></script>
+
+  </head>
+  
+  <body class="coral--light">
+      
+    <div class="page-header" style="background: yellow;">
+
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <p class="superscript">v1.0</p>
+                    <h1 id="title">Psychasync</h1>
+                    <p>Set up automatic Airtable syncs with customizable update triggers and field mappings.</p>
+                    <p><a href="http://go.prod.netflix.net/psychasync">go/psychasync</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Debugging panel
+        <div class="container">
+            <div class="card-panel blue-grey darken-4 white-text" id="debug" style="height: 200px;overflow:scroll;"></div>
+        </div>
+       End debug panel -->
+
+
+    </div>  <!-- End page-header -->
+    
+   
+    <div class="container">
+          
+        <div class="section">
+            <div class="card-panel blue-grey darken-4"><span class="indigo-text text-lighten-5">Set up sync source<i class="material-icons left">forward</i></span></div>
+
+            <div class="progress" id="src_baseId_progress" style="margin-top: -18px;">
+                <div class="indeterminate"></div>
+            </div>
+         </section>
+
+<coral-select id="remote" placeholder="Remote data"></coral-select>
+    
+         <div class="section">
+
+        
+            <!-- Source base ID -->
+            <div class="row" style="margin-bottom: 0;">
+                <div class="input-field col s6" style="margin-bottom: 0;">
+                    <label for="src_baseId">Source Base ID</label>
+                    <input id="src_baseId" type="text" class="" placeholder="Base ID" required value="app06Lp35UxW0BLUS">
+
+                    <span class="helper-text" id="src_baseName"></span>
+                </div>
+
+                <div class="input-field col s6">
+                    <a class="waves-effect waves-light btn" id="btn_loadSrcBase"><i class="material-icons left">autorenew</i>Fetch Base</a>
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <p class="info-text"><strong>Select Source Table and View</strong> (optional &mdash; trigger sync only when records in this view are updated).</p>           
+                </div>
+            </div>
+
+
+            <div class="row">
+               <!-- Source Table --> 
+                <div class="input-field col s6">
+                    <select id="select_srcTable" class="materialSelect">
+                    </select>
+                    <label>Source Table</label>
+                    <span class="helper-text" id="src_tableId"></span>
+                </div>
+
+                 <!-- Source View -->
+                <div class="input-field col s6">
+                    <select id="select_srcView" class="materialSelect">
+                    </select>
+                    <label>View (optional)</label>
+                    <span class="helper-text"></span>
+                </div>
+            </div>
+
+
+            <!-- Source Ignored fields -->
+          <div class="row">
+          
+            <div class="input-field col s12">
+                <p class="info-text"><strong>Ignored fields</strong> (optional &mdash; sync will <u>not</u> trigger if these were the only fields updated).</p>           
+            </div>
+            
+            <div class="input-field col s12">
+                <select id="select_srcIgnoredFields" class="materialSelect" multiple>
+                </select>
+                <label>Ignore updates to these fields</label>
+            </div>
+
+        </div>
+
+
+        </div>
+
+
+
+       <!-- Dest base/table -->
+       
+       <div class="section">
+
+            <div class="card-panel deep-purple darken-4"><span class="indigo-text text-lighten-5"><i class="material-icons left">input</i>Set up sync destination</span></div>
+
+            <!-- Progress loader: Dest Base -->
+            <div class="progress" id="dest_baseId_progress" style="margin-top: -18px;">
+                <div class="indeterminate"></div>
+            </div>
+            
+        </div>
+        
+        <div class="section">
+        
+            <!-- Dest base ID -->
+            <div class="row" style="margin-bottom: 0;">
+                <div class="input-field col s6" style="margin-bottom: 0;">
+                    <label for="dest_baseId">Enter Destination Base ID</label>
+                    <input id="dest_baseId" type="text" class="" placeholder="Base ID" required value="app06Lp35UxW0BLUS">
+
+                    <span class="helper-text" id="dest_baseName"></span>
+                </div>
+
+            <!-- Dest Table --> 
+            <div class="input-field col s6">
+                <select id="select_destTable" class="materialSelect">
+                </select>
+                <label>Select Destination Table</label>
+                <span class="helper-text" id="dest_tableId"></span>
+            </div>
+
+
+
+            <div class="row">
+                <div class="input-field col s6">
+                    <a class="waves-effect waves-light btn" id="btn_loadDestBase"><i class="material-icons left">autorenew</i>Fetch Destination Base</a>
+                </div>
+            </div>
+
+            <div class="row">
+                    <div class="input-field col s12"></div>
+            </div>
+
+        </div>
+
+       
+      
+
+        <!-- Field Mappings base/table -->
+       
+       <div class="section">
+
+            <div class="card-panel  deep-orange darken-1"><span class="white-text"><i class="material-icons left">input</i>Set up field mappings</span></div>
+            
+        </div>
+
+    
+   </div> 
+  </body>
+</html>
+
+
+
