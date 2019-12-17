@@ -27,7 +27,7 @@
         // Setup listener for custom event to re-initialize on change
         $('.materialSelect').on('contentChanged', function(e) {
             console.log('contentChanged: ' +e.currentTarget.id)
-            M.FormSelect.init($(this), dropdownOptions);
+            //M.FormSelect.init($(this), dropdownOptions);
             
             // let inst = M.FormSelect.getInstance($(this))
             //  let selectElem = inst.wrapper
